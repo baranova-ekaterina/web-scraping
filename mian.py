@@ -2,6 +2,7 @@
 import requests
 from fake_headers import Headers
 from bs4 import BeautifulSoup
+import json
 
 parsed_list = []
 
@@ -50,6 +51,8 @@ for vac in vacations:
 
 print(parsed_list)
     
+with open('hhru.json', 'w') as file:
+    json.dump(parsed_list, file)
 
  
     
